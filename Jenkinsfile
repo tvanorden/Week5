@@ -8,7 +8,8 @@ args: '30d'
 ]) {
 node(POD_LABEL) {
 stage('Run pipeline against a gradle project') {
-git 'https://github.com/dlambrig/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition.git'
+git
+'https://github.com/dlambrig/Continuous-Delivery-with-Docker-and-Jenkins-Second-Edition.git'
 container('gradle') {
 stage('Build a gradle project') {
 sh '''
@@ -18,30 +19,21 @@ chmod +x gradlew
 '''
 }
 stage("Code coverage") {
-<<<<<<< HEAD
-try {
-
-sh "./gradlew jacocoTestCoverageVerification"
-sh "./gradlew jacocoTestReport"
-
-
-}  catch (Exception E) {
-=======
 try {
 sh '''
-echo 'Failure detected'
+
 ./gradlew jacocoTestCoverageVerification
 ./gradlew jacocoTestReport
 '''
 } catch (Exception E) {
->>>>>>> parent of a406a77... edit 8
 echo 'Failure detected'
 }
 publishHTML (target: [
-reportDir: "Chapter08/sample1/build/reports/jacoco/test/html",
+reportDir: 'Chapter08/sample1/build/reports/jacoco/tests/test',
 reportFiles: 'index.html',
 reportName: "JaCoCo Report"
 ])
+}
 }
 }
 }
