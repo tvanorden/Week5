@@ -24,7 +24,7 @@ sh "./gradlew jacocoTestCoverageVerification"
 sh "./gradlew jacocoTestReport"
 
 
-} catch (Exception E) {
+} } catch (Exception E) {
 echo 'Failure detected'
 }
 publishHTML (target: [
@@ -36,4 +36,4 @@ reportName: "JaCoCo Report"
 }
 }
 }
-}
+
