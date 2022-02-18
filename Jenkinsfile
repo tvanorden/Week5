@@ -22,7 +22,7 @@ try {
 sh '''
 pwd
 cd Chapter08/sample1
-./gradlew jacocoTestCoverageVerification
+echo 'Failure detected'
 ./gradlew jacocoTestReport
 '''
 } catch (Exception E) {
