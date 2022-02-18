@@ -20,6 +20,7 @@ chmod +x gradlew
 stage("Code coverage") {
 try {
 sh '''
+./gradlew jacocoTestCoverageVerification
 echo 'Failure detected'
 ./gradlew jacocoTestReport
 '''
