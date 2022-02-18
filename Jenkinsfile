@@ -18,7 +18,7 @@ chmod +x gradlew
 '''
 }
 stage("Code coverage") {
-try {
+steps {
 
 sh "./gradlew jacocoTestCoverageVerification"
 sh "./gradlew jacocoTestReport"
