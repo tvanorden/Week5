@@ -19,16 +19,16 @@ chmod +x gradlew
 }
 stage("Code coverage") {
 try {
-sh '''
-echo 'Failure detected'
-./gradlew jacocoTestCoverageVerification
-./gradlew jacocoTestReport
-'''
+
+sh "./gradlew jacocoTestCoverageVerification"
+sh "./gradlew jacocoTestReport"
+
+
 } catch (Exception E) {
 echo 'Failure detected'
 }
 publishHTML (target: [
-reportDir: "Chapter08/sample1/build/reports/jacoco/test/html",
+reportDir: "Chapter08/sample1/build/reports/tests/test",
 reportFiles: 'index.html',
 reportName: "JaCoCo Report"
 ])
