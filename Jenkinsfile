@@ -21,7 +21,7 @@ stage("Code coverage") {
 try {
 sh "./gradlew jacocoTestCoverageVerification"
 sh "./gradlew jacocoTestReport"
-'''
+
 } catch (Exception E) {
 echo 'Failure detected'
 }
