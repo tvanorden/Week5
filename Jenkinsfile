@@ -47,4 +47,4 @@ reportName: "JaCoCo Report"
 }
 }
 }
-
+}
