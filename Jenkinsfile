@@ -19,8 +19,14 @@ chmod +x gradlew
 }
 stage("Code coverage") {
 try {
-sh "./gradlew jacocoTestCoverageVerification"
-sh "./gradlew jacocoTestReport"
+
+sh '''
+pwd
+cd Chapter08/sample1
+./gradlew jacocoTestCoverageVerification
+./gradlew jacocoTestReport
+'''
+
 
 } catch (Exception E) {
 echo 'Failure detected'
