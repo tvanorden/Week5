@@ -26,7 +26,7 @@ sh "./gradlew jacocoTestReport"
 echo 'Failure detected'
 }
 publishHTML (target: [
-reportDir: 'Chapter08/sample1/build/reports/jacoco/test/week5',
+reportDir: 'Chapter08/sample1/build/reports/jacoco/tests/test',
 reportFiles: 'index.html',
 reportName: "JaCoCo Report"
 ])
