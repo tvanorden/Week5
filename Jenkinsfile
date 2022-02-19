@@ -28,7 +28,17 @@ cd Chapter08/sample1
 '''
 
 
-} catch (Exception E) {
+} 
+stage("Static code analysis") {
+               try {
+                    sh "./gradlew checkstyleMain"
+               }
+
+
+
+
+
+catch (Exception E) {
 echo 'Failure detected'
 }
 publishHTML (target: [
