@@ -30,7 +30,7 @@ cd Chapter08/sample1
 
 } 
 stage("Static code analysis") {
-               steps {
+               try {
                     sh "./gradlew checkstyleMain"
                }
 
