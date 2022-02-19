@@ -29,13 +29,6 @@ cd Chapter08/sample1
 
 
 } 
-stage("Static code analysis") {
-               try {
-                    sh "./gradlew checkstyleMain"
-               }
-
-
-
 
 
 catch (Exception E) {
@@ -51,6 +44,4 @@ reportName: "JaCoCo Report"
 }
 }
 }
-}
-
 
