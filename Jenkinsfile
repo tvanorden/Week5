@@ -29,13 +29,16 @@ cd Chapter08/sample1
 
 
 } 
-
+stage("Static code analysis") {
+               steps {
+                    sh "./gradlew checkstyleMain"
+               }
 
 catch (Exception E) {
 echo 'Failure detected'
 }
 publishHTML (target: [
-reportDir: 'Chapter08/sample1/build/reports/jacoco/test/html',
+reportDir: 'Chapter08/sample1/build/reports/checkstyle/main.html',
 reportFiles: 'index.html',
 reportName: "JaCoCo Report"
 ])
