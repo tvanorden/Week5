@@ -86,3 +86,4 @@ reportName: "JaCoCo checkstyle"
 }
 }
 }
+}
