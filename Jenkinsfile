@@ -42,15 +42,6 @@ reportName: "JaCoCo Report"
 
 
 
-
-
-
-
-
-
-
-
-
 stage("Static code analysis") {
 try {
 
@@ -70,7 +61,7 @@ echo 'Failure detected'
 
 
 publishHTML (target: [
-reportDir: 'Chapter08/sample1/build/reports/checkstyle/main.html',
+reportDir: 'Chapter08/sample1/build/reports/checkstyle/main/html',
 reportFiles: 'index.html',
 reportName: "JaCoCo checkstyle"
 ])
