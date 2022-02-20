@@ -37,9 +37,9 @@ echo 'Failure detected'
 
 
 publishHTML (target: [
-reportDir: 'Chapter08/sample1/build/reports/checkstyle/main/html',
+reportDir: 'build/reports/checkstyle/main.html',
 reportFiles: 'index.html',
-reportName: "JaCoCo Report"
+reportName: "JaCoCo checkstyle"
 ])
 
 
